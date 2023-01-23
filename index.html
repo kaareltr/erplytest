@@ -9,13 +9,15 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="header">
-      <span>Invoices</span>
-      <div class="header-buttons">
-        <button>Export</button>
-        <button>New</button>
-        <button>Y</button>
-        <button>...</button>
+    <div class="sides">
+      <div class="header">
+        <div>Invoices</div>
+        <div class="header-buttons">
+          <button>Export</button>
+          <button>New</button>
+          <button>Y</button>
+          <button>...</button>
+        </div>
       </div>
     </div>
     <div class="holygrail-body">
@@ -29,9 +31,11 @@
               <option value="60">60</option>
             </select>
           </div>
-          <button><i class="arrow left"></i></button>
-          <input type="" />
-          <button><i class="arrow right"></i></button>
+          <div class="locator">
+            <button><i class="arrow left"></i></button>
+            <span>1</span>
+            <button><i class="arrow right"></i></button>
+          </div>
           <select name="results" id="results">
             <option value="20">20</option>
             <option value="40">40</option>
@@ -66,7 +70,20 @@
                 <div>...</div>
               </td>
             </tr>
-
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td></td>
+              <td>
+                <div>pending</div>
+              </td>
+              <td>4147.20€</td>
+              <td>
+                <div>...</div>
+              </td>
+            </tr>
             <tr>
               <td><input type="checkbox" /></td>
               <td>Alfreds Futterkiste</td>
@@ -90,14 +107,17 @@
           <button>Add</button>
           <input type="search" />
           <label for="search"></label>
-          <ul>
-            <li>humana.inc</li>
-            <li>macdonalds</li>
-            <div class="import-box">
-              Add customers
-              <button>Upload</button>
-            </div>
-          </ul>
+          <div>
+            <ul class="customer-list">
+              <li>humana.inc</li>
+              <li>macdonalds</li>
+              <li>cocacola</li>
+            </ul>
+          </div>
+          <div class="import-box">
+            Add customers
+            <button>Upload</button>
+          </div>
         </div>
       </div>
     </div>

@@ -27,14 +27,14 @@ table {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-
+.sides {
+  padding-right: 10px;
+}
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
-.header-buttons {
-  margin-right: 27;
-}
+
 .header {
   display: flex;
   background: #e1e6ef;
@@ -44,6 +44,7 @@ table {
 }
 .pagination {
   display: flex;
+  justify-content: space-between;
 }
 .holygrail-body {
   flex: 1 0 auto;
@@ -62,14 +63,20 @@ table {
   background: yellow;
   margin: 0;
 }
-
+ul li::marker {
+  color: #e1e6ef;
+  font-size: 24px;
+}
+.customer-list {
+  text-align: left;
+}
 .aside {
-  background: orange;
+  background: #f8f9fc;
   width: 370px;
   height: 972px;
 }
 td {
-  border-bottom: 2px solid blue;
+  border-bottom: 1px solid #f1f3f9;
 }
 .import-box {
   display: flex;
