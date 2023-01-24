@@ -11,20 +11,20 @@
   <body>
     <div class="sides">
       <div class="header">
-        <div>Invoices</div>
+        <div class="title">Invoices</div>
         <div class="header-buttons">
-          <button>Export</button>
-          <button>New</button>
-          <button>Y</button>
-          <button>...</button>
+          <button class="exportbutton" ><img src="/images/ExportArrow.svg" alt="ExportArrow"> Export</button>
+          <button class="newbutton"><img src="/images/PlusIcon.svg" alt="PlusIcon"> New</button>
+          <button class="filterbutton"><img src="/images/FilterIcon.svg" alt="FilterIcon"></button>
+          <button class="optionsbutton">&#xFE19</button>
         </div>
       </div>
     </div>
     <div class="holygrail-body">
       <div class="content">
         <div class="pagination">
-          <div>
-            <label for="results">Results per page:</label>
+          <div class="paginationlabel">
+            <label for="results">Results per page</label>
             <select name="results" id="results">
               <option value="20">20</option>
               <option value="40">40</option>
@@ -32,9 +32,9 @@
             </select>
           </div>
           <div class="locator">
-            <button><i class="arrow left"></i></button>
+            <button class="pagebutton"><i class="arrow left"></i></button>
             <span>1</span>
-            <button><i class="arrow right"></i></button>
+            <button class="pagebutton"><i class="arrow right"></i></button>
           </div>
           <select name="results" id="results">
             <option value="20">20</option>
@@ -42,12 +42,10 @@
             <option value="60">60</option>
           </select>
         </div>
-        google
         <div>
-          horse
           <table>
             <tr>
-              <th></th>
+              <th><input type="checkbox" /></th>
               <th>Type</th>
               <th>Date</th>
               <th>Customer</th>
@@ -58,69 +56,166 @@
             </tr>
             <tr>
               <td><input type="checkbox" /></td>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td></td>
               <td>
-                <div>pending</div>
+                Receipt
+                <div class="receipt-number">#100048</div>
               </td>
-              <td>4147.20€</td>
               <td>
-                <div>...</div>
+                21.10.2022
+                <div class="billdue">DUE 2 DAYS AGO</div>
               </td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td></td>
+              <td>Lydia Dias</td>
+              <td>Location #12</td>
               <td>
-                <div>pending</div>
+                <div class="statemonitor progress"><span class="statebullet">&#8226</span>IN PROGRESS</div>
               </td>
-              <td>4147.20€</td>
+              <td>129.00€</td>
               <td>
-                <div>...</div>
+                <div>&#xFE19</div>
               </td>
             </tr>
             <tr>
               <td><input type="checkbox" /></td>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td></td>
               <td>
-                <div>pending</div>
+                Receipt
+                <div class="receipt-number">#100048</div>
               </td>
-              <td>4147.20€</td>
+              <td>21.10.2022</td>
+              <td>Livia Siphron
+            </td>
+              <td>Location #12</td>
               <td>
-                <div>...</div>
+                <div class="statemonitor pending"><span class="statebullet">&#8226</span> PENDING</div>
+              </td>
+              <td>4147.20€
+                <div class="unpaid">UNPAID 200.29€</div>
+              </td>
+              <td>
+                <div>&#xFE19</div>
               </td>
             </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                Invoice-Waybill
+                <div class="receipt-number">#100048</div>
+              </td>
+              <td>21.10.2022</td>
+              <td>Tatiana George
+            </td>
+              <td>Location #12</td>
+              <td>
+                <div class="statemonitor success"><span class="statebullet">&#8226</span> SUCCESS</div>
+              </td>
+              <td>129.00€</td>
+              <td>
+                <div>&#xFE19</div>
+              </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  Invoice-Waybill
+                  <div class="receipt-number">#100048</div>
+                </td>
+                <td>21.10.2022</td>
+                <td>Dulce Lipshutz
+              </td>
+                <td>Location #12</td>
+                <td>
+                  <div class="statemonitor complete"><span class="statebullet">&#8226</span> SUCCESS</div>
+                </td>
+                <td>129.00€</td>
+                <td>
+                  <div>&#xFE19</div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  Prepayment inv.
+                  <div class="receipt-number">#100048</div>
+                </td>
+                <td>21.10.2022</td>
+                <td>Paityn Philips
+              </td>
+                <td>Location #12</td>
+                <td>
+                  <div class="statemonitor progress"><span class="statebullet">&#8226</span> IN PROGRESS</div>
+                </td>
+                <td>129.00€</td>
+                <td>
+                  <div>&#xFE19</div>
+                </td>
+              </tr>
           </table>
         </div>
       </div>
       <div class="aside">
         <div class="sidebar">
+            <div class="customers-header">
           Customers
-          <button>Add</button>
-          <input type="search" />
-          <label for="search"></label>
-          <div>
-            <ul class="customer-list">
-              <li>humana.inc</li>
-              <li>macdonalds</li>
-              <li>cocacola</li>
-            </ul>
+          <button class="add-customer-button"><img src="/images/AddCustomer.svg" alt=""> Add</button></div>
+          <div class="alphabet">
+            <a href="">A</a>
+            <a href="">B</a>
+            <a href="">C</a>
+            <a href="">D</a>
+            <a href="">E</a>
+            <a href="">F</a>
+            <a href="">G</a>
+            <a href="">H</a>
+            <a href="">I</a>
+            <a href="">J</a>
+            <a href="">K</a>
+            <a href="">L</a>
+            <a href="">M</a>
+            <a href="">N</a>
+            <a href="">O</a>
+            <a href="">P</a>
+            <a href="">Q</a>
+            <a href="">R</a>
+            <a href="">S</a>
+            <a href="">T</a>
+            <a href="">U</a>
+            <a href="">V</a>
+            <a href="">W</a>
+            <a href="">X</a>
+            <a href="">Y</a>
+            <a href="">Z</a>
+
           </div>
+          <div class="searchfield">
+          <input class="searchbox" />
+          <button class="searchbutton">Search</button>
+        </div>
+            <ul class="customer-list">
+              <li><a href=""> Marathon Oil Corp.</a></li>
+              <li><a href="">Sealed Air</a></li>
+              <li><a href="">Southern Company</a></li>
+              <li><a href="">Atmos Energy</a></li>
+              <li><a href="">Equifax Inc.</a></li>
+              <li><a href="">Kansas City Southern</a></li>
+              <li><a href="">Fidelity National Services</a></li>
+              <li><a href="">Colgate-Palmolive</a></li>
+              <li><a href="">Air Products & Chemicals Inc</a></li>
+              <li><a href="">Intuitive Surgical Inc.</a></li>
+              <li><a href="">Quest Diagnostics</a></li>
+              <li><a href="">Crown Castle International Corp.</a></li>
+              <li><a href="">News Corp. Class A</a></li>
+              <li><a href="">Federal Realty Investment Trust</a></li>
+              <li><a href="">Humana Inc.</a></li>
+            </ul>
           <div class="import-box">
-            Add customers
-            <button>Upload</button>
+            <div class="importheader">
+            <p> Add customers</p>
+            <a class="closebutton" ></a>
+        </div>
+            <p class="addcustomers">You can add customers by pessing the Add + button in the corner or by importing your clients from a CSV file</p>
+            <button class="importbutton"><img src="/images/Vector.svg" alt=""> Import customers</button>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer">Footer</footer>
   </body>
 </html>
