@@ -95,10 +95,8 @@ table {
   align-items: center;
   padding: 10px;
   border: none;
-
   width: 40px;
   height: 40px;
-
   background: #f1f3f9;
   border-radius: 5px;
 }
@@ -136,26 +134,21 @@ table {
 }
 select {
   box-sizing: border-box;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 6px 9px;
   gap: 8px;
-
   width: 63px;
   height: 32px;
-
   background: #ffffff;
-
   border: 1px solid #adbbca;
   border-radius: 4px;
-
   flex: none;
   order: 1;
   flex-grow: 0;
 }
-.holygrail-body {
+.main-body {
   flex: 1 0 auto;
   display: flex;
 }
@@ -198,7 +191,9 @@ th {
   padding: 13px;
   text-align: left;
 }
-
+.selected-row {
+  background: #e8f1fe;
+}
 .billdue,
 .unpaid {
   display: flex;
@@ -207,20 +202,16 @@ th {
   align-items: center;
   padding: 2px 4px;
   gap: 2px;
-
   width: fit-content;
   height: 19px;
-
   background: #ffefec;
   border-radius: 3px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-
   letter-spacing: 0.02em;
   text-transform: uppercase;
-
   color: #e0593e;
 }
 .receipt-number {
@@ -297,11 +288,9 @@ a {
   align-items: center;
   padding: 8px 10px;
   gap: 8px;
-
   width: 205px;
   height: 40px;
   box-sizing: border-box;
-
   border: 1px solid #bfcbd9;
   border-radius: 4px;
 }
@@ -356,7 +345,6 @@ a {
   gap: 7px;
   width: 199px;
   height: 40px;
-
   background: #e8f1fe;
 
   border: 1px solid #accbf6;
@@ -397,7 +385,7 @@ a {
   align-items: center;
 }
 @media (max-width: 700px) {
-  .holygrail-body {
+  .main-body {
     flex-direction: column;
   }
   .nav,
